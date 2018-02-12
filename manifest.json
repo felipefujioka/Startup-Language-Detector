@@ -3,6 +3,9 @@
     "description" : "This app detects startup common buzz words and rank your page accordingly with its buzzity.",
     "version": "1.0",
     "manifest_version": 2,
+    "icons": { 
+        "64": "sl_detector.png"
+    },
     "browser_action": {
         "default_popup": "sl_detector_popup.html",
         "default_icon": "sl_detector.png"
