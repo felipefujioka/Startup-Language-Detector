@@ -1,0 +1,19 @@
+{
+    "name": "Startup Language Detector",
+    "description" : "This app detects startup common buzz words and rank your page accordingly with its buzzity.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "sl_detector_popup.html",
+        "default_icon": "sl_detector.png"
+    },
+    "permissions": [ "tabs", "http://*/*", "https://*/*", "storage" ],
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*", "file://*/*"],
+            "css": [ "css/sl_detector.css" ],
+            "js": ["js/sl_detector_content.js"],
+            "run_at": "document_idle"
+        }
+    ]
+}
