@@ -4,6 +4,8 @@ SLD
 
 This project has as main objective to be a 4 hours 2018 carnival project, nothing else, the usability and functionality of this app is totally not guaranteed and will never be. Any bug or complaint should be kept secret from its creator.
 
+![Example](https://raw.githubusercontent.com/felipefujioka/Startup-Language-Detector/master/example.png)
+
 How to install
 =======
 Clone this repo:
