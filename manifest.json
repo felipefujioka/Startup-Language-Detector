@@ -15,8 +15,9 @@
         {
             "matches": ["http://*/*", "https://*/*", "file://*/*"],
             "css": [ "css/sl_detector.css" ],
-            "js": ["js/sl_detector_content.js"],
+            "js": ["js/sl_detector_content.js", "sl_detector_popup.js"],
             "run_at": "document_idle"
         }
-    ]
+    ],
+    "background": { "scripts": ["js/hot-reload.js"] }
 }

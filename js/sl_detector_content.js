@@ -177,6 +177,8 @@ highlightRange = function(range, color) {
 
 var highlightWordInTextNodeOnly = function (word) {
 
+    var count = 0;
+
     // skip empty word
     if (word == null || word.length === 0) return;
 
@@ -223,8 +225,10 @@ var highlightWordInTextNodeOnly = function (word) {
         // highlight all ranges
         rangeList.forEach(function (r) {
             highlightRange(r, bgColorCode);
+            count++;
         });
     });
+    return count;
 };
 
 // TODO: find works in unnexpected ways in different browsers and it can lead to unpredicted results
@@ -247,13 +251,16 @@ var highlightNodes = function(word) {
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-        console.log("received message from button");
+        // console.log("received message from button");
         window.getSelection().removeAllRanges();
 
+        var count = 0;
+
         sl_words.forEach(word => {
-            console.log("searching for: " + word);
-            highlightWordInTextNodeOnly(word);
+            // console.log("searching for: " + word);
+            count+=highlightWordInTextNodeOnly(word);
         });
-        
+
+        sendResponse.wordCount = count;
     }
 );

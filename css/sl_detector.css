@@ -8,3 +8,16 @@
 
 	color: rgb(0, 0, 0);
 }
+
+.main-div {
+	width: 200px;
+	border-radius: 5px;
+}
+
+button {
+	background-color: #00CED1;
+	color: #000000;
+	border-radius: 5px;
+	width: 100px;
+	height: 20px;
+}
